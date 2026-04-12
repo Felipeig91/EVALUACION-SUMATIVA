@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- 
+        REQUERIMIENTO PROFESOR: HTML5 y estructura base
+        Página de registro de servicios
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar Anuncio - Aviso Local</title>
+
+    <!-- Bootstrap 5 CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS externo ubicado en carpeta css/ -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <!-- 
+        REQUERIMIENTO PROFESOR: Etiqueta semántica <header>
+    -->
+    <header class="header-main">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container-fluid px-4">
+          <a class="navbar-brand" href="../index.html"
+            ><img
+              src="../img/logo.jpg"
+              alt="Aviso Local Logo"
+              class="navbar-brand-logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cupones.html">Cupones</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="registro.html">Registrarse</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- 
+        REQUERIMIENTO PROFESOR: Etiqueta semántica <main>
+    -->
+    <main>
+      <!-- Breadcrumb -->
+      <div class="bg-light py-3 border-bottom">
+        <div class="container">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item">
+                <a href="../index.html">Inicio</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">
+                Registrar Servicio
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="py-5 bg-light">
+        <div class="container text-center">
+          <h1 class="display-5 fw-bold mb-3">Registra tu Servicio</h1>
+          <p class="lead text-muted">
+            Comparte tu negocio o servicio con la comunidad en nuestro
+            directorio
+          </p>
+        </div>
+      </section>
+
+      <!-- 
+            REQUERIMIENTO PROFESOR: Etiqueta semántica <section>
+        -->
+      <section class="py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- 
+                            REQUERIMIENTO PROFESOR: Etiqueta semántica <article>
+                            Formulario de registro
+                        -->
+              <article class="card border-0 shadow">
+                <div class="card-header bg-warning text-dark">
+                  <h5 class="card-title mb-0">Información del Servicio</h5>
+                </div>
+                <div class="card-body p-4">
+                  <form class="needs-validation" novalidate>
+                    <!-- Información Personal -->
+                    <fieldset class="mb-4">
+                      <legend class="fw-bold mb-3">
+                        Datos del Responsable
+                      </legend>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="nombre" class="form-label"
+                            >Nombre Completo</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Ingresa tu nombre completo.
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="telefono" class="form-label"
+                            >Teléfono</label
+                          >
+                          <input
+                            type="tel"
+                            class="form-control"
+                            id="telefono"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Ingresa un teléfono válido.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="email" class="form-label"
+                          >Correo Electrónico</label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa un correo válido.
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- Información del Servicio -->
+                    <fieldset class="mb-4">
+                      <legend class="fw-bold mb-3">
+                        Información del Servicio
+                      </legend>
+
+                      <div class="mb-3">
+                        <label for="nombreServicio" class="form-label"
+                          >Nombre del Servicio/Negocio</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="nombreServicio"
+                          placeholder="Ej: Centro Médico Los Lagos"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa el nombre del servicio.
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="categoria" class="form-label"
+                          >Categoría</label
+                        >
+                        <select class="form-select" id="categoria" required>
+                          <option value="">Selecciona una categoría</option>
+                          <option value="salud">Salud</option>
+                          <option value="educacion">Educación</option>
+                          <option value="social">Apoyo Social</option>
+                          <option value="recreacion">Recreación</option>
+                          <option value="otro">Otro</option>
+                        </select>
+                        <div class="invalid-feedback">
+                          Selecciona una categoría.
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="descripcion" class="form-label"
+                          >Descripción del Servicio</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="descripcion"
+                          rows="4"
+                          placeholder="Describe brevemente lo que ofreces..."
+                          required
+                        ></textarea>
+                        <div class="invalid-feedback">
+                          Ingresa una descripción.
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- Ubicación -->
+                    <fieldset class="mb-4">
+                      <legend class="fw-bold mb-3">Ubicación</legend>
+
+                      <div class="mb-3">
+                        <label for="direccion" class="form-label"
+                          >Dirección</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="direccion"
+                          placeholder="Calle, número, ciudad"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa la dirección.
+                        </div>
+                      </div>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="ciudad" class="form-label">Ciudad</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="ciudad"
+                            required
+                          />
+                          <div class="invalid-feedback">Ingresa la ciudad.</div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="region" class="form-label">Región</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="region"
+                            required
+                          />
+                          <div class="invalid-feedback">Ingresa la región.</div>
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- Horario -->
+                    <fieldset class="mb-4">
+                      <legend class="fw-bold mb-3">Horario de Atención</legend>
+
+                      <div class="row mb-3">
+                        <div class="col-md-6">
+                          <label for="horaApertura" class="form-label"
+                            >Hora de Apertura</label
+                          >
+                          <input
+                            type="time"
+                            class="form-control"
+                            id="horaApertura"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Ingresa la hora de apertura.
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <label for="horaCierre" class="form-label"
+                            >Hora de Cierre</label
+                          >
+                          <input
+                            type="time"
+                            class="form-control"
+                            id="horaCierre"
+                            required
+                          />
+                          <div class="invalid-feedback">
+                            Ingresa la hora de cierre.
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Días de Atención</label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="lunes"
+                            value="Lunes"
+                            checked
+                          />
+                          <label class="form-check-label" for="lunes"
+                            >Lunes</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="martes"
+                            value="Martes"
+                            checked
+                          />
+                          <label class="form-check-label" for="martes"
+                            >Martes</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="miercoles"
+                            value="Miércoles"
+                            checked
+                          />
+                          <label class="form-check-label" for="miercoles"
+                            >Miércoles</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="jueves"
+                            value="Jueves"
+                            checked
+                          />
+                          <label class="form-check-label" for="jueves"
+                            >Jueves</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="viernes"
+                            value="Viernes"
+                            checked
+                          />
+                          <label class="form-check-label" for="viernes"
+                            >Viernes</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="sabado"
+                            value="Sábado"
+                          />
+                          <label class="form-check-label" for="sabado"
+                            >Sábado</label
+                          >
+                        </div>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            id="domingo"
+                            value="Domingo"
+                          />
+                          <label class="form-check-label" for="domingo"
+                            >Domingo</label
+                          >
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <!-- Términos -->
+                    <fieldset class="mb-4">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          id="terminos"
+                          required
+                        />
+                        <label class="form-check-label" for="terminos">
+                          Acepto los términos y condiciones y confirmo que la
+                          información es correcta.
+                        </label>
+                        <div class="invalid-feedback">
+                          Debes aceptar los términos para continuar.
+                        </div>
+                      </div>
+                    </fieldset>
+
+                    <div
+                      class="d-grid gap-2 d-md-flex justify-content-md-between"
+                    >
+                      <a href="servicios.html" class="btn btn-secondary btn-lg">
+                        Cancelar
+                      </a>
+                      <button class="btn btn-warning btn-lg" type="submit">
+                        Registrar Servicio
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 
+        REQUERIMIENTO PROFESOR: Etiqueta semántica <footer>
+    -->
+    <footer class="footer-main bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-2">
+          &copy; 2026 Avisolocal.cl - Desarrollado por [Nombres de los
+          integrantes]. Todos los derechos reservados.
+        </p>
+        <p class="text-muted small">
+          Plataforma de anuncios comunitarios para conectar servicios locales
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Validación del formulario
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add("was-validated");
+            },
+            false,
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>
