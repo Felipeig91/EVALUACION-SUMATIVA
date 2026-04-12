@@ -5,7 +5,7 @@
 ### Evaluación Parcial 1 - Desarrollo de Sitio Web Básico
 
 **Universidad de Los Lagos**  
-**Alumno:** Francisco Calfún Gutiérrez  
+**Alumno:** Felipe Rodriguez, Cristian Brevis  
 **Año:** 2026
 
 ---
