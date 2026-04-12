@@ -1,0 +1,701 @@
+/* 
+    REQUERIMIENTO PROFESOR: CSS externo
+    Archivo de estilos personalizados separado de HTML
+    Ubicado en carpeta css/ para mejor organización
+    
+    Uso de:
+    - Clases CSS
+    - Selectores
+    - Colores y tipografías coherentes
+    - Diseño responsive
+*/
+
+/* ============================================
+   Variables de Colores (Tema Personalizado)
+   ============================================ */
+:root {
+    --color-primary: #1a237e;
+    --color-secondary: #ffc107;
+    --color-accent: #0d6efd;
+    --color-success: #198754;
+    --color-danger: #dc3545;
+    --color-light-bg: #f8f9fa;
+    --color-text-dark: #212529;
+    --color-text-muted: #6c757d;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Segoe UI', 'Trebuchet MS', sans-serif;
+}
+
+/* ============================================
+   Estilos Generales
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+/* ============================================
+   Header y Navegación
+   ============================================ */
+.header-main {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 109, 0, 0.5);
+}
+
+.navbar-brand-logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-nav .nav-link {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-secondary) !important;
+    background-color: rgba(255, 109, 0, 0.1);
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+.hero-section {
+    background-image: 
+        linear-gradient(135deg, rgba(26, 26, 26, 0.75), rgba(45, 45, 45, 0.75)),
+        url('../img/PMC.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 6rem 0;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section h1 {
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: slideInDown 0.8s ease;
+    color: #ffffff;
+}
+
+.hero-section p, 
+.hero-section .lead {
+    font-size: 1.3rem;
+    animation: slideInUp 0.8s ease;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-section .btn {
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.hero-section .btn-warning {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: white;
+}
+
+.hero-section .btn-warning:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 109, 0, 0.4);
+}
+
+.hero-section .btn-outline-light {
+    border-width: 2px;
+}
+
+.hero-section .btn-outline-light:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   Secciones de Contenido
+   ============================================ */
+.section-about,
+.section-features,
+.section-servicios {
+    padding: 4rem 0;
+}
+
+.section-about {
+    background-color: var(--color-light-bg);
+}
+
+.section-about h2,
+.section-features h2,
+.section-servicios h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-about h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
+}
+
+/* ============================================
+   Cards y Componentes
+   ============================================ */
+.card {
+    border: none;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-header {
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+.card-service {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-service .card-header {
+    padding: 1.25rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-text-dark));
+}
+
+/* Feature Icons */
+.feature-icon {
+    font-size: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .feature-icon {
+    transform: scale(1.2) rotate(10deg);
+}
+
+/* ============================================
+   Botones
+   ============================================ */
+.btn {
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+}
+
+.btn-warning {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: white;
+}
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus {
+    background-color: #ff8533;
+    border-color: #ff8533;
+    color: white;
+}
+
+.btn-outline-warning {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:active {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: white;
+}
+
+.btn-lg {
+    padding: 0.8rem 2rem;
+}
+
+/* ============================================
+   Formularios
+   ============================================ */
+.form-control,
+.form-select {
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 109, 0, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.needs-validation .form-control.is-invalid,
+.needs-validation .form-select.is-invalid {
+    border-color: var(--color-danger);
+}
+
+.needs-validation .form-control.is-valid,
+.needs-validation .form-select.is-valid {
+    border-color: var(--color-success);
+}
+
+fieldset {
+    border: 2px solid var(--color-light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+fieldset legend {
+    width: auto;
+    padding: 0 1rem;
+    margin-left: -0.5rem;
+    color: var(--color-text-dark);
+    font-size: 1.1rem;
+}
+
+/* ============================================
+   CTA Sections
+   ============================================ */
+.cta-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, var(--color-text-dark), var(--color-primary));
+    color: white;
+}
+
+.cta-section h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+/* ============================================
+   Breadcrumb
+   ============================================ */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: var(--color-secondary);
+}
+
+.breadcrumb-item a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--color-secondary);
+}
+
+.breadcrumb-item.active {
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer-main {
+    background: linear-gradient(135deg, var(--color-primary), #0d0d0d);
+    border-top: 3px solid var(--color-secondary);
+    margin-top: auto;
+}
+
+.footer-main p {
+    margin: 0;
+}
+
+.footer-main p.text-muted {
+    color: white !important;
+}
+
+.footer-main a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-main a:hover {
+    color: #ffb300;
+    text-decoration: underline;
+}
+
+/* ============================================
+   Responsive Design - Media Queries
+   ============================================ */
+
+/* Tablets - 768px y arriba */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1rem;
+    }
+
+    .section-about h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 109, 0, 0.1);
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group > .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Móviles pequeños - menos de 576px */
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 2rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem !important;
+        margin-right: 0 !important;
+    }
+
+    .display-5 {
+        font-size: 1.75rem;
+    }
+
+    .card {
+        margin-bottom: 1.5rem;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .section-about,
+    .section-features,
+    .section-servicios {
+        padding: 2rem 0;
+    }
+
+    .btn-lg {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    fieldset {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .row.g-4 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
+}
+
+/* ============================================
+   Accesibilidad y Estilos Adicionales
+   ============================================ */
+
+/* Enfoque visible para navegación por teclado */
+.btn:focus,
+.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+/* Animaciones suaves */
+* {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+button,
+a {
+    transition: all 0.3s ease;
+}
+
+/* Scroll behavior especial */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-secondary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ffb300;
+}
+
+/* Sombras consistentes */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Espaciado consistente */
+.container {
+    max-width: 1200px;
+}
+
+/* Tipografía */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+/* Ligas */
+a {
+    color: var(--color-accent);
+}
+
+a:hover {
+    color: var(--color-secondary);
+}
+
+/* Listas */
+ul, ol {
+    margin-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ============================================
+   Carrusel de Servicios
+   ============================================ */
+.carousel {
+    border-radius: 6px 6px 0 0;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    border-radius: 6px 6px 0 0;
+}
+
+.carousel-img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-item-content {
+    border-radius: 6px 6px 0 0;
+}
+
+.carousel-item {
+    height: 200px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 8%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ============================================
+   Cupones
+   ============================================ */
+.cupon-card {
+    border-left: 5px solid var(--color-secondary);
+    transition: all 0.3s ease;
+}
+
+.cupon-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 109, 0, 0.2);
+}
+
+.cupon-card .card-header {
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.cupon-code {
+    border: 2px dashed var(--color-secondary);
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.section-cupones {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-membresia {
+    background-color: var(--color-light-bg);
+    border-top: 5px solid var(--color-secondary);
+}
+
+/* ============================================
+   Impresión
+   ============================================ */
+@media print {
+    .navbar,
+    .footer-main,
+    .cta-section {
+        display: none;
+    }
+
+    body {
+        background-color: white;
+    }
+
+    .card {
+        page-break-inside: avoid;
+    }
+}
