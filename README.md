@@ -33,7 +33,7 @@ En las comunidades locales existe un **problema significativo de falta de visibi
 
 ### Modelo Comunitario: 100% Gratuito sin Fines de Lucro
 
-**ULAGOS-Connect** es una iniciativa comunitaria basada en:
+**Aviso Local** es una iniciativa comunitaria basada en:
 
 #### 1. **Principios Fundamentales**
 
@@ -67,16 +67,15 @@ En las comunidades locales existe un **problema significativo de falta de visibi
 - **HTML5**: Estructura semántica correcta con etiquetas modernas
 - **CSS3**: Estilos personalizados con animaciones y responsive design
 - **Bootstrap 5**: Framework CSS para componentes y grid system
-- **JavaScript**: Validación de formularios e interactividad
+- **JavaScript**: Validación de formularios e interactividad - pero se encuentra inactivo. Sera utilizado en la siguiente unidad
 
 ---
 
 ## 📁 Estructura del Proyecto
 
 ```
-ULAGOS-Connect/
+Evaluacion Sumativa/
 ├── 📁 html/                   # Archivos HTML
-│   ├── index.html             # Página de inicio - Propósito comunitario
 │   ├── servicios.html         # Directorio con carruseles integrados
 │   ├── cupones.html           # Página de cupones 100% gratis
 │   ├── contacto.html          # Formulario de contacto
@@ -92,8 +91,11 @@ ULAGOS-Connect/
 │   └── README.md              # Este archivo
 │
 ├── .gitignore                 # Configuración Git
+|
+├── index.html             # Página de inicio - Propósito comunitario
+|
 └── Raíz de proyecto
-```
+
 
 ---
 
