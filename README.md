@@ -216,3 +216,5 @@ _Este proyecto es una iniciativa comunitaria desarrollada bajo el marco de la as
 - [ ] Dashboard comunitario de estadísticas
 
 link website: https://website-d0faad4f.fvu.mhx.mybluehost.me/html/quienes-somos.html
+
+PPT 1 presentacion: https://website-d0faad4f.fvu.mhx.mybluehost.me/Avisolocal_Digital_Platform.pdf
