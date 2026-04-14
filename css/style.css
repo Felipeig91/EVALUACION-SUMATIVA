@@ -37,6 +37,8 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -44,6 +46,7 @@ body {
     color: var(--color-text-dark);
     line-height: 1.6;
     background-color: #ffffff;
+    width: 100%;
     overflow-x: hidden;
 }
 

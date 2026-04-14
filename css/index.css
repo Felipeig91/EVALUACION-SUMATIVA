@@ -8,29 +8,24 @@
    ============================================ */
 .hero-section-fullwidth {
     width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: calc((-100vw + 100%) / 2);
     background-image: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
         url('../img/PMC.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem;
     text-white;
     text-align: center;
-    overflow-x: hidden;
 }
 
 .hero-content {
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     padding: 0 2rem;
 }
@@ -114,6 +109,25 @@
 .featured-services {
     background-color: #f8f9fa;
     padding: 4rem 0;
+}
+
+.featured-services h2 {
+    position: relative;
+    padding-bottom: 1.5rem;
+    color: var(--color-text-dark);
+    font-family: var(--font-heading);
+}
+
+.featured-services h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
 }
 
 .service-card {

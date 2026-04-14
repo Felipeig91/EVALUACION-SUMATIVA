@@ -73,7 +73,7 @@ En las comunidades locales existe un **problema significativo de falta de visibi
 
 ## 📁 Estructura del Proyecto
 
-```
+````
 Evaluacion Sumativa/
 ├── 📁 html/                   # Archivos HTML
 │   ├── servicios.html         # Directorio con carruseles integrados
@@ -127,7 +127,7 @@ Evaluacion Sumativa/
 ```bash
 # Desde la carpeta raíz del proyecto:
 open index.html
-```
+````
 
 ### Opción 2: Live Server (VS Code) ⭐ Recomendado
 
@@ -199,7 +199,7 @@ open index.html
 
 ## 📢 Avisolocal - El Diario Mural Digital
 
-**Autoría:** Felipe Ignacio Rodriguez & Equipo  
+**Autoría:** Felipe Rodriguez Y Cristian Brevis  
 **Licencia:** Uso Comunitario - Sin Fines de Lucro
 
 _Este proyecto es una iniciativa comunitaria desarrollada bajo el marco de la asignatura 'Desarrollo de Sitio Web Básico' de la Universidad de Los Lagos. Diseñado para conectar a la comunidad de Puerto Montt de forma gratuita, con énfasis en la ayuda mutua y apoyo al comercio local._
