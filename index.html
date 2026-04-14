@@ -23,6 +23,8 @@
         Archivo separado de estilos personalizados ubicado en carpeta css/
     -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Estilos específicos para página de inicio -->
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <!-- 
@@ -81,19 +83,43 @@
         Contenido principal del sitio
     -->
     <main>
-      <!-- Hero Section -->
-      <section class="hero-section text-white text-center py-5">
-        <div class="container">
-          <h1 class="display-4 fw-bold mb-4">Bienvenido a Aviso Local</h1>
-          <p class="lead mb-4">
-            Tu plataforma para descubrir servicios comunitarios locales
-          </p>
-          <a class="btn btn-warning btn-lg me-3" href="html/servicios.html">
-            Explorar Servicios
-          </a>
-          <a class="btn btn-outline-light btn-lg" href="html/registro.html">
-            Registrar Servicio
-          </a>
+      <!-- Hero Section with Search -->
+      <section class="hero-section-fullwidth text-white text-center">
+        <div class="hero-content">
+          <h1 class="display-5 fw-bold mb-5">Buscar servicios locales...</h1>
+          <div class="row mb-5">
+            <div class="col-lg-8 mx-auto">
+              <div class="input-group input-group-lg">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="¿Qué servicio buscas?"
+                  aria-label="Buscar servicios"
+                />
+                <button class="btn btn-primary" type="button" id="search-btn">
+                  🔍
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="btn-group" role="group">
+                <button type="button" class="btn btn-outline-light">
+                  Todos
+                </button>
+                <button type="button" class="btn btn-outline-light">
+                  Restaurante
+                </button>
+                <button type="button" class="btn btn-outline-light">
+                  Comercio
+                </button>
+                <button type="button" class="btn btn-outline-light">
+                  Servicios
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -147,41 +173,194 @@
         </div>
       </section>
 
-      <!-- 
-            REQUERIMIENTO PROFESOR: Bootstrap Grid System
-            Uso de filas y columnas para layout responsive
-        -->
-      <section class="section-features py-5">
+      <!-- Featured Services Section -->
+      <section class="featured-services py-5">
         <div class="container">
-          <h2 class="text-center mb-5">¿Por qué Aviso Local?</h2>
           <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-              <div class="card shadow-sm border-0 h-100">
-                <div class="card-body text-center">
-                  <h3 class="card-title text-warning">🔍 Fácil Búsqueda</h3>
-                  <p class="card-text">
-                    Encuentra servicios rápidamente por categoría o ubicación
-                  </p>
+            <!-- Service Card 1 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service1.jpg"
+                  alt="Servicio 1"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Restaurante La Cocina
+                    </h5>
+                    <p class="text-white small mb-2">Comida típica chilena</p>
+                    <div class="stars">⭐⭐⭐⭐⭐ (4.8)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card shadow-sm border-0 h-100">
-                <div class="card-body text-center">
-                  <h3 class="card-title text-warning">📍 Información Local</h3>
-                  <p class="card-text">
-                    Datos actualizados de servicios en tu comunidad
-                  </p>
+
+            <!-- Service Card 2 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service2.jpg"
+                  alt="Servicio 2"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Jardinería Profesional
+                    </h5>
+                    <p class="text-white small mb-2">
+                      Diseño y mantenimiento de jardines
+                    </p>
+                    <div class="stars">⭐⭐⭐⭐ (4.5)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
                 </div>
               </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card shadow-sm border-0 h-100">
-                <div class="card-body text-center">
-                  <h3 class="card-title text-warning">🤝 Colaborativo</h3>
-                  <p class="card-text">
-                    Contribuye y ayuda a otros a conocer nuevos servicios
-                  </p>
+
+            <!-- Service Card 3 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service3.jpg"
+                  alt="Servicio 3"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Panadería Artesanal
+                    </h5>
+                    <p class="text-white small mb-2">
+                      Pan fresco todos los días
+                    </p>
+                    <div class="stars">⭐⭐⭐⭐⭐ (4.9)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service4.jpg"
+                  alt="Servicio 4"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Peluquería Moderna
+                    </h5>
+                    <p class="text-white small mb-2">Cortes y tratamientos</p>
+                    <div class="stars">⭐⭐⭐⭐ (4.7)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 5 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service5.jpg"
+                  alt="Servicio 5"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">Café Boutique</h5>
+                    <p class="text-white small mb-2">Café de especialidad</p>
+                    <div class="stars">⭐⭐⭐⭐⭐ (4.8)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 6 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service6.jpg"
+                  alt="Servicio 6"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Pizzería Italiana
+                    </h5>
+                    <p class="text-white small mb-2">Pizza horno de leña</p>
+                    <div class="stars">⭐⭐⭐⭐ (4.6)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 7 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service7.jpg"
+                  alt="Servicio 7"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Estudio de Yoga
+                    </h5>
+                    <p class="text-white small mb-2">
+                      Clases de yoga y pilates
+                    </p>
+                    <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Card 8 -->
+            <div class="col-md-6 col-lg-3">
+              <div class="service-card h-100 position-relative overflow-hidden">
+                <img
+                  src="img/services/service8.jpg"
+                  alt="Servicio 8"
+                  class="service-image w-100"
+                />
+                <div
+                  class="service-overlay d-flex flex-column justify-content-between p-3"
+                >
+                  <div>
+                    <h5 class="card-title text-white fw-bold">
+                      Barbería Clásica
+                    </h5>
+                    <p class="text-white small mb-2">Barbería tradicional</p>
+                    <div class="stars">⭐⭐⭐⭐ (4.4)</div>
+                  </div>
+                  <button class="btn btn-sm btn-outline-light">Ver más</button>
                 </div>
               </div>
             </div>

@@ -1,12 +1,12 @@
 /* 
     REQUERIMIENTO PROFESOR: CSS externo
-    Archivo de estilos personalizados separado de HTML
+    Archivo de estilos GENERALES y COMUNES
     Ubicado en carpeta css/ para mejor organización
     
     Uso de:
-    - Clases CSS
-    - Selectores
-    - Colores y tipografías coherentes
+    - Variables de colores compartidas
+    - Estilos generales del sitio
+    - Header, Footer, Botones, Formularios
     - Diseño responsive
 */
 
@@ -44,6 +44,7 @@ body {
     color: var(--color-text-dark);
     line-height: 1.6;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
 /* ============================================
@@ -89,125 +90,7 @@ body {
 }
 
 /* ============================================
-   Hero Section
-   ============================================ */
-.hero-section {
-    background-image: 
-        linear-gradient(135deg, rgba(26, 26, 26, 0.75), rgba(45, 45, 45, 0.75)),
-        url('../img/PMC.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 6rem 0;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero-section h1 {
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: slideInDown 0.8s ease;
-    color: #ffffff;
-}
-
-.hero-section p, 
-.hero-section .lead {
-    font-size: 1.3rem;
-    animation: slideInUp 0.8s ease;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-section .btn {
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.hero-section .btn-warning {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: white;
-}
-
-.hero-section .btn-warning:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 109, 0, 0.4);
-}
-
-.hero-section .btn-outline-light {
-    border-width: 2px;
-}
-
-.hero-section .btn-outline-light:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    transform: translateY(-2px);
-}
-
-/* ============================================
-   Secciones de Contenido
-   ============================================ */
-.section-about,
-.section-features,
-.section-servicios {
-    padding: 4rem 0;
-}
-
-.section-about {
-    background-color: var(--color-light-bg);
-}
-
-.section-about h2,
-.section-features h2,
-.section-servicios h1 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--color-text-dark);
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.section-about h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 60px;
-    height: 4px;
-    background-color: var(--color-secondary);
-    border-radius: 2px;
-}
-
-/* ============================================
-   Cards y Componentes
+   Cards y Componentes Generales
    ============================================ */
 .card {
     border: none;
@@ -250,7 +133,7 @@ body {
 }
 
 /* ============================================
-   Botones
+   Botones Generales
    ============================================ */
 .btn {
     font-weight: 600;
@@ -419,110 +302,42 @@ fieldset legend {
 }
 
 /* ============================================
-   Responsive Design - Media Queries
+   Secciones de Contenido Generales
    ============================================ */
-
-/* Tablets - 768px y arriba */
-@media (max-width: 768px) {
-    .hero-section {
-        padding: 4rem 0;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .hero-section .btn {
-        display: block;
-        width: 100%;
-        max-width: 400px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1rem;
-    }
-
-    .section-about h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .navbar-nav {
-        margin-top: 1rem;
-    }
-
-    .navbar-nav .nav-link {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255, 109, 0, 0.1);
-    }
-
-    fieldset {
-        padding: 1rem;
-    }
-
-    .btn-group {
-        display: block;
-    }
-
-    .btn-group > .btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 0.5rem;
-    }
+.section-about,
+.section-features,
+.section-servicios,
+.section-proposito {
+    padding: 4rem 0;
 }
 
-/* Móviles pequeños - menos de 576px */
-@media (max-width: 576px) {
-    .hero-section {
-        padding: 2rem 0;
-    }
+.section-about,
+.section-proposito {
+    background-color: var(--color-light-bg);
+}
 
-    .hero-section h1 {
-        font-size: 1.5rem;
-    }
+.section-about h2,
+.section-features h2,
+.section-servicios h1,
+.section-proposito h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+    position: relative;
+    padding-bottom: 1rem;
+}
 
-    .hero-section .btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem !important;
-        margin-right: 0 !important;
-    }
-
-    .display-5 {
-        font-size: 1.75rem;
-    }
-
-    .card {
-        margin-bottom: 1.5rem;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-    }
-
-    .section-about,
-    .section-features,
-    .section-servicios {
-        padding: 2rem 0;
-    }
-
-    .btn-lg {
-        padding: 0.6rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    fieldset {
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .row.g-4 {
-        --bs-gutter-x: 1rem;
-        --bs-gutter-y: 1rem;
-    }
+.section-about h2::after,
+.section-proposito h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secondary);
+    border-radius: 2px;
 }
 
 /* ============================================
@@ -613,72 +428,76 @@ img {
 }
 
 /* ============================================
-   Carrusel de Servicios
+   Responsive Design - Media Queries
    ============================================ */
-.carousel {
-    border-radius: 6px 6px 0 0;
-    overflow: hidden;
+
+/* Tablets - 768px y arriba */
+@media (max-width: 768px) {
+    .section-about h2::after,
+    .section-proposito h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 109, 0, 0.1);
+    }
+
+    fieldset {
+        padding: 1rem;
+    }
+
+    .btn-group {
+        display: block;
+    }
+
+    .btn-group > .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }
 
-.carousel-inner {
-    border-radius: 6px 6px 0 0;
-}
+/* Móviles pequeños - menos de 576px */
+@media (max-width: 576px) {
+    .display-5 {
+        font-size: 1.75rem;
+    }
 
-.carousel-img {
-    height: 200px;
-    object-fit: cover;
-}
+    .card {
+        margin-bottom: 1.5rem;
+    }
 
-.carousel-item-content {
-    border-radius: 6px 6px 0 0;
-}
+    .card:hover {
+        transform: translateY(-5px);
+    }
 
-.carousel-item {
-    height: 200px;
-}
+    .section-about,
+    .section-features,
+    .section-servicios,
+    .section-proposito {
+        padding: 2rem 0;
+    }
 
-.carousel-control-prev,
-.carousel-control-next {
-    width: 8%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
+    .btn-lg {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
+    }
 
-.carousel-control-prev:hover,
-.carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
+    fieldset {
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
 
-/* ============================================
-   Cupones
-   ============================================ */
-.cupon-card {
-    border-left: 5px solid var(--color-secondary);
-    transition: all 0.3s ease;
-}
-
-.cupon-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(255, 109, 0, 0.2);
-}
-
-.cupon-card .card-header {
-    padding: 0.75rem 1rem;
-    border-bottom: 2px solid var(--color-secondary);
-}
-
-.cupon-code {
-    border: 2px dashed var(--color-secondary);
-    font-weight: 600;
-    letter-spacing: 2px;
-}
-
-.section-cupones {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-}
-
-.section-membresia {
-    background-color: var(--color-light-bg);
-    border-top: 5px solid var(--color-secondary);
+    .row.g-4 {
+        --bs-gutter-x: 1rem;
+        --bs-gutter-y: 1rem;
+    }
 }
 
 /* ============================================

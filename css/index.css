@@ -1,0 +1,277 @@
+/* 
+    Estilos específicos para INDEX.HTML
+    Página de inicio - Hero Section con búsqueda y galería de servicios
+*/
+
+/* ============================================
+   Hero Section Full Width (Index)
+   ============================================ */
+.hero-section-fullwidth {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-image: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('../img/PMC.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.hero-section-fullwidth h1 {
+    font-weight: 700;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    animation: slideInDown 0.8s ease;
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.hero-section-fullwidth .btn-outline-light {
+    border-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero-section-fullwidth .btn-outline-light:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Buscador (Index)
+   ============================================ */
+.hero-section-fullwidth .input-group {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section-fullwidth .form-control {
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+}
+
+.hero-section-fullwidth .form-control:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.hero-section-fullwidth .btn-primary {
+    background-color: var(--color-accent);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.hero-section-fullwidth .btn-primary:hover {
+    background-color: #0d5fee;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Featured Services Section (Galería)
+   ============================================ */
+.featured-services {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+
+.service-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.1);
+}
+
+.service-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.service-card:hover .service-overlay {
+    opacity: 1;
+}
+
+.service-overlay .card-title {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-overlay .stars {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #ffd700;
+}
+
+.service-overlay .btn-outline-light {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid white;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.service-overlay .btn-outline-light:hover {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    color: #000;
+}
+
+/* ============================================
+   Sección Propósito / Sobre Nosotros (Index)
+   ============================================ */
+.section-proposito {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+}
+
+.section-proposito h2 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-dark);
+}
+
+.section-proposito .card {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.section-proposito .card .btn-warning {
+    margin-top: 1rem;
+}
+
+/* ============================================
+   Responsive (Index)
+   ============================================ */
+@media (max-width: 768px) {
+    .hero-section-fullwidth {
+        min-height: 350px;
+        padding: 2rem 0;
+    }
+
+    .hero-section-fullwidth h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section-fullwidth .input-group-lg > .form-control,
+    .hero-section-fullwidth .input-group-lg > .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .btn-group .btn {
+        flex: 1;
+        min-width: 100px;
+        margin: 0.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section-fullwidth {
+        min-height: 300px;
+        padding: 1.5rem 0;
+    }
+
+    .hero-section-fullwidth h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-card {
+        margin-bottom: 1rem;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .featured-services .row {
+        --bs-gutter-x: 0.75rem;
+        --bs-gutter-y: 0.75rem;
+    }
+
+    .section-proposito .row {
+        gap: 1.5rem;
+    }
+}

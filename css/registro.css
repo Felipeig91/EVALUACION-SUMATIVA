@@ -1,0 +1,340 @@
+/* 
+    Estilos específicos para REGISTRO.HTML
+    Página de registro de servicios
+*/
+
+/* ============================================
+   Sección Registro
+   ============================================ */
+.section-registro {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.section-registro h1 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--color-text-dark);
+    text-align: center;
+}
+
+.section-registro p {
+    text-align: center;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   Formulario de Registro
+   ============================================ */
+.form-registro {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid var(--color-secondary);
+}
+
+.form-section {
+    margin-bottom: 2rem;
+}
+
+.form-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-light-bg);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-row.full {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-group.required label::after {
+    content: " *";
+    color: var(--color-danger);
+}
+
+.form-help-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+}
+
+/* ============================================
+   Checkbox y Radio
+   ============================================ */
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.form-check input[type="checkbox"],
+.form-check input[type="radio"] {
+    width: auto;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.form-check label {
+    margin: 0;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* ============================================
+   Upload de Archivos
+   ============================================ */
+.file-upload {
+    border: 2px dashed var(--color-secondary);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(255, 193, 7, 0.05);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+    background-color: rgba(255, 193, 7, 0.1);
+    border-color: var(--color-secondary);
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.file-upload-text {
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   Botones de Acción
+   ============================================ */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.form-actions .btn {
+    min-width: 150px;
+    padding: 0.75rem 1.5rem;
+}
+
+.form-actions .btn-success {
+    background-color: var(--color-success);
+    border-color: var(--color-success);
+}
+
+.form-actions .btn-success:hover {
+    background-color: #157347;
+    border-color: #157347;
+}
+
+.form-actions .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.form-actions .btn-secondary:hover {
+    background-color: #5c636a;
+    border-color: #5c636a;
+}
+
+/* ============================================
+   Mensaje de Éxito/Error
+   ============================================ */
+.alert-registro {
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid;
+}
+
+.alert-success {
+    background-color: rgba(25, 135, 84, 0.1);
+    border-left-color: var(--color-success);
+    color: #0f5132;
+}
+
+.alert-error {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left-color: var(--color-danger);
+    color: #842029;
+}
+
+/* ============================================
+   Indicador de Progreso
+   ============================================ */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.progress-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.progress-step::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    right: -50%;
+    height: 2px;
+    background-color: #e0e0e0;
+    z-index: -1;
+}
+
+.progress-step.active::after,
+.progress-step.completed::after {
+    background-color: var(--color-secondary);
+}
+
+.progress-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    color: var(--color-text-muted);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.progress-step.active .progress-number,
+.progress-step.completed .progress-number {
+    background-color: var(--color-secondary);
+    color: black;
+}
+
+.progress-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   Responsive (Registro)
+   ============================================ */
+@media (max-width: 768px) {
+    .section-registro {
+        padding: 2rem 0;
+    }
+
+    .form-registro {
+        padding: 1.5rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .file-upload {
+        padding: 1.5rem;
+    }
+
+    .file-upload-icon {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+
+    .progress-steps {
+        gap: 0;
+    }
+
+    .progress-step::after {
+        right: -100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .form-registro {
+        padding: 1rem;
+    }
+
+    .form-section h3 {
+        font-size: 1rem;
+    }
+
+    .progress-number {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .progress-label {
+        font-size: 0.8rem;
+    }
+
+    .form-check {
+        margin-bottom: 0.5rem;
+    }
+}
