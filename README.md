@@ -214,3 +214,5 @@ _Este proyecto es una iniciativa comunitaria desarrollada bajo el marco de la as
 - [ ] Sistema de notificaciones de ofertas locales
 - [ ] Base de datos comunitaria descentralizada
 - [ ] Dashboard comunitario de estadísticas
+
+link website: https://website-d0faad4f.fvu.mhx.mybluehost.me/html/quienes-somos.html
