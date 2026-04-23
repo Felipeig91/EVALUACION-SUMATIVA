@@ -96,16 +96,25 @@
           <h1 class="display-5 fw-bold mb-5">Buscar servicios locales...</h1>
           <div class="row mb-5">
             <div class="col-lg-8 mx-auto">
-              <div class="input-group input-group-lg">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="¿Qué servicio buscas?"
-                  aria-label="Buscar servicios"
-                />
-                <button class="btn btn-primary" type="button" id="search-btn">
-                  🔍
-                </button>
+              <div class="position-relative">
+                <div class="input-group input-group-lg">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="search-input"
+                    placeholder="¿Qué servicio buscas?"
+                    aria-label="Buscar servicios"
+                    autocomplete="off"
+                  />
+                  <button class="btn btn-primary" type="button" id="search-btn">
+                    🔍
+                  </button>
+                </div>
+                <div
+                  id="search-suggestions"
+                  class="list-group position-absolute w-100 d-none"
+                  style="z-index: 1050; top: calc(100% + 0.5rem)"
+                ></div>
               </div>
             </div>
           </div>
