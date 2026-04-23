@@ -153,7 +153,7 @@
             </div>
 
             <!-- Formulario de Contacto -->
-            <div class="col-lg-6">
+            <div class="col-lg-6 bg bg-primary bg-opacity-10 p-4 rounded shadow-sm">
               <h2 class="mb-4">Envíanos un Mensaje</h2>
               <form
                 class="needs-validation"
@@ -177,72 +177,391 @@
                   name="_next"
                   value="https://website-d0faad4f.fvu.mhx.mybluehost.me/html/contacto.html?enviado=1"
                 />
-                <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre Completo</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="nombre"
-                    name="nombre"
-                    placeholder="Tu nombre"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Por favor ingresa tu nombre.
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="nombre" class="form-label"
+                      >Nombre Completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Tu nombre"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingresa tu nombre.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="tu@email.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingresa un correo válido.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="ciudad" class="form-label">Ciudad</label>
+                    <select
+                      class="form-select"
+                      id="ciudad"
+                      name="ciudad"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Selecciona tu ciudad
+                      </option>
+                      <option value="Puerto Montt">Puerto Montt</option>
+                      <option value="Puerto Varas">Puerto Varas</option>
+                      <option value="Alerce">Alerce</option>
+                      <option value="Frutillar">Frutillar</option>
+                      <option value="Otra">Otra</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor selecciona una ciudad.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="sector" class="form-label"
+                      >Comuna o Sector</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="sector"
+                      name="sector"
+                      list="sectores"
+                      placeholder="Ej: Mirasol, Alerce Sur, Pelluco"
+                      required
+                    />
+                    <datalist id="sectores">
+                      <option value="Mirasol"></option>
+                      <option value="Alerce"></option>
+                      <option value="Pelluco"></option>
+                      <option value="Angelmo"></option>
+                      <option value="Centro"></option>
+                    </datalist>
+                    <div class="invalid-feedback">
+                      Por favor ingresa tu comuna o sector.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="tipo-consulta" class="form-label"
+                      >Tipo de consulta</label
+                    >
+                    <select
+                      class="form-select"
+                      id="tipo-consulta"
+                      name="tipo_consulta"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Selecciona un tipo
+                      </option>
+                      <option value="Informacion general">
+                        Informacion general
+                      </option>
+                      <option value="Soporte tecnico">Soporte tecnico</option>
+                      <option value="Reclamo">Reclamo</option>
+                      <option value="Sugerencia">Sugerencia</option>
+                      <option value="Alianza comunitaria">
+                        Alianza comunitaria
+                      </option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor selecciona el tipo de consulta.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label class="form-label" for="prioridad"
+                      >Prioridad del mensaje</label
+                    >
+                    <select
+                      class="form-select"
+                      id="prioridad"
+                      name="prioridad"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Selecciona prioridad
+                      </option>
+                      <option value="Baja">Baja</option>
+                      <option value="Media">Media</option>
+                      <option value="Alta">Alta</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor selecciona una prioridad.
+                    </div>
+                  </div>
+
+                  <fieldset class="col-12 col-md-6">
+                    <legend class="col-form-label pt-0">
+                      Canal de respuesta preferido
+                    </legend>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="canal_respuesta"
+                        id="canal-email"
+                        value="Correo"
+                        required
+                      />
+                      <label class="form-check-label" for="canal-email"
+                        >Correo</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="canal_respuesta"
+                        id="canal-whatsapp"
+                        value="WhatsApp"
+                        required
+                      />
+                      <label class="form-check-label" for="canal-whatsapp"
+                        >WhatsApp</label
+                      >
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="canal_respuesta"
+                        id="canal-llamada"
+                        value="Llamada"
+                        required
+                      />
+                      <label class="form-check-label" for="canal-llamada"
+                        >Llamada</label
+                      >
+                    </div>
+                  </fieldset>
+
+                  <div class="col-12 col-md-6">
+                    <label for="horario-preferido" class="form-label"
+                      >Horario de contacto preferido</label
+                    >
+                    <select
+                      class="form-select"
+                      id="horario-preferido"
+                      name="horario_preferido"
+                      required
+                    >
+                      <option value="" selected disabled>
+                        Selecciona una franja horaria
+                      </option>
+                      <option value="Manana (09:00 - 12:00)">
+                        Manana (09:00 - 12:00)
+                      </option>
+                      <option value="Tarde (12:00 - 18:00)">
+                        Tarde (12:00 - 18:00)
+                      </option>
+                      <option value="Despues de las 18:00">
+                        Despues de las 18:00
+                      </option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Por favor selecciona un horario.
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="asunto" class="form-label">Asunto</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="asunto"
+                      name="asunto"
+                      placeholder="Asunto del mensaje"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Por favor ingresa el asunto.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea
+                      class="form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      rows="5"
+                      placeholder="Tu mensaje..."
+                      required
+                    ></textarea>
+                    <div class="invalid-feedback">
+                      Por favor escribe tu mensaje.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <button class="btn btn-warning btn-lg w-100" type="submit">
+                      Enviar Mensaje
+                    </button>
                   </div>
                 </div>
-
-                <div class="mb-3">
-                  <label for="email" class="form-label"
-                    >Correo Electrónico</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    placeholder="tu@email.com"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Por favor ingresa un correo válido.
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="asunto" class="form-label">Asunto</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="asunto"
-                    name="asunto"
-                    placeholder="Asunto del mensaje"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Por favor ingresa el asunto.
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <label for="mensaje" class="form-label">Mensaje</label>
-                  <textarea
-                    class="form-control"
-                    id="mensaje"
-                    name="mensaje"
-                    rows="5"
-                    placeholder="Tu mensaje..."
-                    required
-                  ></textarea>
-                  <div class="invalid-feedback">
-                    Por favor escribe tu mensaje.
-                  </div>
-                </div>
-
-                <button class="btn btn-warning btn-lg w-100" type="submit">
-                  Enviar Mensaje
-                </button>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Componentes extra (máximo 10) -->
+      <section class="pb-5">
+        <div class="container">
+          <div
+            class="alert alert-info d-flex justify-content-between align-items-center"
+            role="alert"
+          >
+            <span
+              >Atención rápida: respondemos en menos de 24 horas hábiles.</span
+            >
+            <span class="badge bg-primary">Prioridad comunitaria</span>
+          </div>
+
+          <div class="row g-4 mt-1">
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5 card-title">Canales disponibles</h3>
+                  <p class="card-text text-muted mb-3">
+                    Puedes comunicarte por formulario, correo o teléfono según
+                    tu necesidad.
+                  </p>
+                  <ul class="list-group list-group-flush mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                      Formulario web
+                      <span class="badge bg-success">Activo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                      Correo directo
+                      <span class="badge bg-success">Activo</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                      Llamada telefónica
+                      <span class="badge bg-warning text-dark"
+                        >Horario hábil</span
+                      >
+                    </li>
+                  </ul>
+                  <div
+                    class="progress"
+                    role="progressbar"
+                    aria-label="Nivel de respuesta"
+                    aria-valuenow="90"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                  >
+                    <div
+                      class="progress-bar bg-warning text-dark"
+                      style="width: 90%"
+                    >
+                      Respuesta 90%
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5 card-title">Preguntas frecuentes</h3>
+                  <div class="accordion" id="faqContacto">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="faqOneHeading">
+                        <button
+                          class="accordion-button"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faqOne"
+                          aria-expanded="true"
+                          aria-controls="faqOne"
+                        >
+                          ¿Recibiré confirmación por correo?
+                        </button>
+                      </h2>
+                      <div
+                        id="faqOne"
+                        class="accordion-collapse collapse show"
+                        aria-labelledby="faqOneHeading"
+                        data-bs-parent="#faqContacto"
+                      >
+                        <div class="accordion-body">
+                          Sí, al enviar el formulario te llegará un mensaje de
+                          confirmación automática.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="faqTwoHeading">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#faqTwo"
+                          aria-expanded="false"
+                          aria-controls="faqTwo"
+                        >
+                          ¿En cuánto tiempo responden?
+                        </button>
+                      </h2>
+                      <div
+                        id="faqTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="faqTwoHeading"
+                        data-bs-parent="#faqContacto"
+                      >
+                        <div class="accordion-body">
+                          Generalmente respondemos dentro de 24 horas hábiles.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="btn-group mt-3"
+                    role="group"
+                    aria-label="Acciones rápidas"
+                  >
+                    <button
+                      type="button"
+                      class="btn btn-outline-dark"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modalContactoRapido"
+                    >
+                      Ver resumen
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-outline-warning"
+                      data-bs-toggle="offcanvas"
+                      data-bs-target="#offcanvasAyuda"
+                      aria-controls="offcanvasAyuda"
+                    >
+                      Ayuda rápida
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -265,6 +584,69 @@
           </div>
         </div>
       </section>
+
+      <div
+        class="modal fade"
+        id="modalContactoRapido"
+        tabindex="-1"
+        aria-labelledby="modalContactoRapidoLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title fs-5" id="modalContactoRapidoLabel">
+                Resumen de contacto
+              </h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Cerrar"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Envíanos tu consulta y recibirás una confirmación por correo de
+              forma automática.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasAyuda"
+        aria-labelledby="offcanvasAyudaLabel"
+      >
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title fs-5" id="offcanvasAyudaLabel">
+            Ayuda rápida
+          </h2>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <p class="mb-2">1. Completa todos los campos.</p>
+          <p class="mb-2">2. Revisa que tu correo esté bien escrito.</p>
+          <p class="mb-0">
+            3. Presiona Enviar Mensaje y revisa tu bandeja de entrada.
+          </p>
+        </div>
+      </div>
     </main>
 
     <!-- 
