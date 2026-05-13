@@ -1,302 +1,373 @@
-/* 
-    Estilos específicos para REGISTRO.HTML
-    Página de registro de servicios
-*/
+/**
+ * AVISOLOCAL - ESTILOS DE PÁGINA DE REGISTRO
+ * Página de registro de servicios con diseño moderno
+ */
 
 /* ============================================
-   Sección Registro
+   SECCIÓN REGISTRO
    ============================================ */
 .section-registro {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-neutral-50);
 }
 
 .section-registro h1 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--color-text-dark);
-    text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
+  text-align: center;
 }
 
 .section-registro p {
-    text-align: center;
-    color: var(--color-text-muted);
-    margin-bottom: 2rem;
+  text-align: center;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-2xl);
 }
 
 /* ============================================
-   Formulario de Registro
+   FORMULARIO DE REGISTRO MODERNO
    ============================================ */
 .form-registro {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-top: 5px solid var(--color-secondary);
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
 }
 
 .form-section {
-    margin-bottom: 2rem;
+  margin-bottom: var(--space-2xl);
+}
+
+.form-section:last-child {
+  margin-bottom: 0;
 }
 
 .form-section h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--color-text-dark);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--color-light-bg);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 2px solid var(--color-neutral-200);
 }
 
 .form-row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-lg);
 }
 
 .form-row.full {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  grid-template-columns: 1fr;
 }
 
 .form-group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-group label {
-    font-weight: 600;
-    color: var(--color-text-dark);
-    margin-bottom: 0.5rem;
-    font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: var(--space-sm);
+  font-size: 0.95rem;
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
-    padding: 0.75rem;
-    border-radius: 6px;
-    border: 1px solid #dee2e6;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-neutral-300);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  transition: all var(--transition-fast);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-neutral-400);
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
-    outline: none;
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-group textarea {
-    min-height: 120px;
-    resize: vertical;
+  min-height: 120px;
+  resize: vertical;
+  font-family: inherit;
 }
 
 .form-group.required label::after {
-    content: " *";
-    color: var(--color-danger);
+  content: " *";
+  color: var(--color-error);
 }
 
 .form-help-text {
-    font-size: 0.85rem;
-    color: var(--color-text-muted);
-    margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--color-neutral-600);
+  margin-top: var(--space-xs);
 }
 
 /* ============================================
-   Checkbox y Radio
+   CHECKBOX Y RADIO
    ============================================ */
 .form-check {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-md);
+  gap: var(--space-md);
 }
 
 .form-check input[type="checkbox"],
 .form-check input[type="radio"] {
-    width: auto;
-    margin-right: 0.5rem;
-    cursor: pointer;
+  width: auto;
+  cursor: pointer;
+  accent-color: var(--color-accent);
 }
 
 .form-check label {
-    margin: 0;
-    cursor: pointer;
-    font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+  color: var(--color-neutral-700);
+  font-weight: 500;
 }
 
 /* ============================================
-   Upload de Archivos
+   UPLOAD DE ARCHIVOS
    ============================================ */
 .file-upload {
-    border: 2px dashed var(--color-secondary);
-    border-radius: 8px;
-    padding: 2rem;
-    text-align: center;
-    background-color: rgba(255, 193, 7, 0.05);
-    cursor: pointer;
-    transition: all 0.3s ease;
+  border: 2px dashed var(--color-accent);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
+  background-color: rgba(59, 130, 246, 0.03);
+  cursor: pointer;
+  transition: all var(--transition-base);
 }
 
 .file-upload:hover {
-    background-color: rgba(255, 193, 7, 0.1);
-    border-color: var(--color-secondary);
+  background-color: rgba(59, 130, 246, 0.08);
+  border-color: var(--color-accent-hover);
 }
 
 .file-upload input[type="file"] {
-    display: none;
+  display: none;
 }
 
 .file-upload-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-lg);
 }
 
 .file-upload-text {
-    color: var(--color-text-muted);
+  color: var(--color-neutral-700);
+  font-weight: 500;
+}
+
+.file-upload-subtext {
+  color: var(--color-neutral-600);
+  font-size: 0.9rem;
+  margin-top: var(--space-sm);
 }
 
 /* ============================================
-   Botones de Acción
-   ============================================ */
-.form-actions {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    justify-content: center;
-}
-
-.form-actions .btn {
-    min-width: 150px;
-    padding: 0.75rem 1.5rem;
-}
-
-.form-actions .btn-success {
-    background-color: var(--color-success);
-    border-color: var(--color-success);
-}
-
-.form-actions .btn-success:hover {
-    background-color: #157347;
-    border-color: #157347;
-}
-
-.form-actions .btn-secondary {
-    background-color: #6c757d;
-    border-color: #6c757d;
-}
-
-.form-actions .btn-secondary:hover {
-    background-color: #5c636a;
-    border-color: #5c636a;
-}
-
-/* ============================================
-   Mensaje de Éxito/Error
-   ============================================ */
-.alert-registro {
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-left: 5px solid;
-}
-
-.alert-success {
-    background-color: rgba(25, 135, 84, 0.1);
-    border-left-color: var(--color-success);
-    color: #0f5132;
-}
-
-.alert-error {
-    background-color: rgba(220, 53, 69, 0.1);
-    border-left-color: var(--color-danger);
-    color: #842029;
-}
-
-/* ============================================
-   Indicador de Progreso
+   INDICADOR DE PROGRESO
    ============================================ */
 .progress-steps {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-3xl);
+  gap: var(--space-md);
 }
 
 .progress-step {
-    flex: 1;
-    text-align: center;
-    position: relative;
+  flex: 1;
+  text-align: center;
+  position: relative;
 }
 
 .progress-step::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    right: -50%;
-    height: 2px;
-    background-color: #e0e0e0;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background-color: var(--color-neutral-300);
+  z-index: -1;
 }
 
 .progress-step.active::after,
 .progress-step.completed::after {
-    background-color: var(--color-secondary);
+  background-color: var(--color-accent);
 }
 
 .progress-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    color: var(--color-text-muted);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-neutral-200);
+  border-radius: var(--radius-full);
+  color: var(--color-neutral-700);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  transition: all var(--transition-fast);
 }
 
 .progress-step.active .progress-number,
 .progress-step.completed .progress-number {
-    background-color: var(--color-secondary);
-    color: black;
+  background-color: var(--color-accent);
+  color: white;
 }
 
 .progress-label {
-    font-size: 0.9rem;
-    color: var(--color-text-muted);
+  font-size: 0.9rem;
+  color: var(--color-neutral-700);
+  font-weight: 500;
 }
 
 /* ============================================
-   Responsive (Registro)
+   BOTONES DE ACCIÓN
    ============================================ */
+.form-actions {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-3xl);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.form-actions .btn {
+  min-width: 150px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   ALERTAS
+   ============================================ */
+.alert-registro {
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-left: 4px solid;
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.alert-success {
+  background-color: rgba(16, 185, 129, 0.1);
+  border-left-color: var(--color-secondary);
+  color: #065f46;
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left-color: var(--color-error);
+  color: #7f1d1d;
+}
+
+.alert-warning {
+  background-color: rgba(251, 191, 36, 0.1);
+  border-left-color: var(--color-warning);
+  color: #78350f;
+}
+
+.alert-info {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-left-color: var(--color-info);
+  color: #1e40af;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .form-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+}
+
 @media (max-width: 768px) {
-    .section-registro {
-        padding: 2rem 0;
-    }
+  .section-registro {
+    padding: var(--space-2xl) 0;
+  }
 
-    .form-registro {
-        padding: 1.5rem;
-    }
+  .section-registro h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
+  }
 
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
+  .form-registro {
+    padding: var(--space-lg);
+  }
 
-    .file-upload {
-        padding: 1.5rem;
-    }
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
 
-    .file-upload-icon {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
+  .form-actions {
+    gap: var(--space-md);
+    margin-top: var(--space-2xl);
+  }
+
+  .file-upload {
+    padding: var(--space-lg);
+  }
+
+  .file-upload-icon {
+    font-size: 2rem;
+    margin-bottom: var(--space-md);
+  }
+}
+
+@media (max-width: 576px) {
+  .section-registro {
+    padding: var(--space-xl) 0;
+  }
+
+  .section-registro h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-section h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .progress-steps {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .alert-registro {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}
 
     .form-actions {
         flex-direction: column;

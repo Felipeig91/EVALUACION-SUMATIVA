@@ -22,6 +22,7 @@
         REQUERIMIENTO PROFESOR: CSS externo
         Archivo separado de estilos personalizados ubicado en carpeta css/
     -->
+    <link rel="stylesheet" href="css/design-system.css" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- Estilos específicos para página de inicio -->
     <link rel="stylesheet" href="css/index.css" />
@@ -91,9 +92,9 @@
     -->
     <main>
       <!-- Hero Section with Search -->
-      <section class="hero-section-fullwidth text-white text-center">
+      <section class="hero-section-fullwidth">
         <div class="hero-content">
-          <h1 class="display-5 fw-bold mb-5">Buscar servicios locales...</h1>
+          <h1>Encuentra servicios y comercios locales en Puerto Montt</h1>
           <div class="row mb-5">
             <div class="col-lg-8 mx-auto">
               <div class="position-relative">
@@ -106,8 +107,13 @@
                     aria-label="Buscar servicios"
                     autocomplete="off"
                   />
-                  <button class="btn btn-primary" type="button" id="search-btn">
-                    🔍
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    id="search-btn"
+                    aria-label="Buscar"
+                  >
+                    Buscar
                   </button>
                 </div>
                 <div
@@ -169,17 +175,19 @@
               </ul>
             </div>
             <div class="col-lg-6">
-              <div class="card bg-primary text-white p-5 text-center">
-                <h3 class="mb-3">¿Cómo Funciona?</h3>
-                <p class="mb-4">
+              <div class="card bg-light p-5 text-center border-0">
+                <h3 class="mb-3 text-primary">¿Cómo Funciona?</h3>
+                <p class="mb-4 text-muted">
                   Descubre servicios locales, accede a cupones de descuento del
                   comercio vecino y conecta con tu comunidad.
                 </p>
                 <div class="d-grid gap-3">
-                  <a href="html/servicios.html" class="btn btn-warning btn-lg"
+                  <a href="html/servicios.html" class="btn btn-primary btn-lg"
                     >Explorar Servicios</a
                   >
-                  <a href="html/cupones.html" class="btn btn-light btn-lg"
+                  <a
+                    href="html/cupones.html"
+                    class="btn btn-outline-secondary btn-lg"
                     >Ver Cupones Gratuitos</a
                   >
                 </div>
@@ -196,188 +204,154 @@
           <div class="row g-4">
             <!-- Service Card 1 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/canchaPublica.jpeg"
-                  alt="Servicio 1"
-                  class="service-image w-100"
+                  alt="Restaurante La Cocina"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Restaurante La Cocina
-                    </h5>
-                    <p class="text-white small mb-2">Comida típica chilena</p>
-                    <div class="stars">⭐⭐⭐⭐⭐ (4.8)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Restaurante La Cocina</h5>
+                  <p class="card-text text-muted">Comida típica chilena</p>
+                  <p class="card-text small">⭐⭐⭐⭐⭐ (4.8)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 2 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/BRPM.jpeg"
-                  alt="Servicio 2"
-                  class="service-image w-100"
+                  alt="Jardinería Profesional"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Jardinería Profesional
-                    </h5>
-                    <p class="text-white small mb-2">
-                      Diseño y mantenimiento de jardines
-                    </p>
-                    <div class="stars">⭐⭐⭐⭐ (4.5)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Jardinería Profesional</h5>
+                  <p class="card-text text-muted">
+                    Diseño y mantenimiento de jardines
+                  </p>
+                  <p class="card-text small">⭐⭐⭐⭐ (4.5)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 3 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/centrocomunitario.jpg"
-                  alt="Servicio 3"
-                  class="service-image w-100"
+                  alt="Panadería Artesanal"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Panadería Artesanal
-                    </h5>
-                    <p class="text-white small mb-2">
-                      Pan fresco todos los días
-                    </p>
-                    <div class="stars">⭐⭐⭐⭐⭐ (4.9)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Panadería Artesanal</h5>
+                  <p class="card-text text-muted">Pan fresco todos los días</p>
+                  <p class="card-text small">⭐⭐⭐⭐⭐ (4.9)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 4 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/centroMedico.jpg"
-                  alt="Servicio 4"
-                  class="service-image w-100"
+                  alt="Peluquería Moderna"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Peluquería Moderna
-                    </h5>
-                    <p class="text-white small mb-2">Cortes y tratamientos</p>
-                    <div class="stars">⭐⭐⭐⭐ (4.7)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Peluquería Moderna</h5>
+                  <p class="card-text text-muted">Cortes y tratamientos</p>
+                  <p class="card-text small">⭐⭐⭐⭐ (4.7)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 5 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/ClinicadentalMunicipal.jpg"
-                  alt="Servicio 5"
-                  class="service-image w-100"
+                  alt="Café Boutique"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">Café Boutique</h5>
-                    <p class="text-white small mb-2">Café de especialidad</p>
-                    <div class="stars">⭐⭐⭐⭐⭐ (4.8)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Café Boutique</h5>
+                  <p class="card-text text-muted">Café de especialidad</p>
+                  <p class="card-text small">⭐⭐⭐⭐⭐ (4.8)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 6 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/servicioBienestar.jpeg"
-                  alt="Servicio 6"
-                  class="service-image w-100"
+                  alt="Pizzería Italiana"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Pizzería Italiana
-                    </h5>
-                    <p class="text-white small mb-2">Pizza horno de leña</p>
-                    <div class="stars">⭐⭐⭐⭐ (4.6)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Pizzería Italiana</h5>
+                  <p class="card-text text-muted">Pizza horno de leña</p>
+                  <p class="card-text small">⭐⭐⭐⭐ (4.6)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 7 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/BRPM.jpeg"
-                  alt="Servicio 7"
-                  class="service-image w-100"
+                  alt="Estudio de Yoga"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Estudio de Yoga
-                    </h5>
-                    <p class="text-white small mb-2">
-                      Clases de yoga y pilates
-                    </p>
-                    <div class="stars">⭐⭐⭐⭐⭐ (5.0)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Estudio de Yoga</h5>
+                  <p class="card-text text-muted">Clases de yoga y pilates</p>
+                  <p class="card-text small">⭐⭐⭐⭐⭐ (5.0)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
 
             <!-- Service Card 8 -->
             <div class="col-md-6 col-lg-3">
-              <div class="service-card h-100 position-relative overflow-hidden">
+              <div class="service-card">
                 <img
                   src="img/services/centroMedico.jpg"
-                  alt="Servicio 8"
-                  class="service-image w-100"
+                  alt="Barbería Clásica"
+                  class="service-image"
                 />
-                <div
-                  class="service-overlay d-flex flex-column justify-content-between p-3"
-                >
-                  <div>
-                    <h5 class="card-title text-white fw-bold">
-                      Barbería Clásica
-                    </h5>
-                    <p class="text-white small mb-2">Barbería tradicional</p>
-                    <div class="stars">⭐⭐⭐⭐ (4.4)</div>
-                  </div>
-                  <button class="btn btn-sm btn-outline-light">Ver más</button>
+                <div class="card-body">
+                  <h5 class="card-title">Barbería Clásica</h5>
+                  <p class="card-text text-muted">Barbería tradicional</p>
+                  <p class="card-text small">⭐⭐⭐⭐ (4.4)</p>
+                  <a href="html/servicios.html" class="btn btn-sm btn-primary"
+                    >Ver más</a
+                  >
                 </div>
               </div>
             </div>
@@ -385,7 +359,7 @@
           <!-- Ver más servicios button -->
           <div class="row mt-5">
             <div class="col-12 text-center">
-              <a href="html/servicios.html" class="btn btn-warning btn-lg">
+              <a href="html/servicios.html" class="btn btn-primary btn-lg">
                 Ver Más Servicios
               </a>
             </div>
@@ -394,14 +368,14 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="cta-section py-5 bg-dark text-white">
-        <div class="container text-center">
-          <h2 class="mb-4">¿Eres Comercio o Emprendedor Local?</h2>
-          <p class="mb-4">
+      <section class="cta-section">
+        <div class="container">
+          <h2>¿Eres Comercio o Emprendedor Local?</h2>
+          <p>
             Registra tu servicio GRATUITAMENTE y llega a toda la comunidad de
             Puerto Montt
           </p>
-          <a href="html/registro.html" class="btn btn-warning btn-lg"
+          <a href="html/registro.html" class="btn btn-primary btn-lg"
             >Registrar Servicio Gratuito</a
           >
         </div>

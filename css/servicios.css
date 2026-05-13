@@ -1,256 +1,392 @@
-/* 
-    Estilos específicos para SERVICIOS.HTML
-    Página de búsqueda y listado de servicios
-*/
+/**
+ * AVISOLOCAL - ESTILOS DE PÁGINA DE SERVICIOS
+ * Página de búsqueda y listado de servicios con diseño moderno
+ */
 
 /* ============================================
-   Hero Section para Servicios
-   ============================================ */
-.hero-section {
-    background-image: 
-        linear-gradient(135deg, rgba(26, 26, 26, 0.75), rgba(45, 45, 45, 0.75)),
-        url('../img/PMC.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    padding: 6rem 0;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.hero-section h1 {
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: slideInDown 0.8s ease;
-    color: #ffffff;
-}
-
-.hero-section p, 
-.hero-section .lead {
-    font-size: 1.3rem;
-    animation: slideInUp 0.8s ease;
-    color: #ffffff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.hero-section .btn {
-    transition: all 0.3s ease;
-    font-weight: 600;
-}
-
-.hero-section .btn-warning {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: white;
-}
-
-.hero-section .btn-warning:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(255, 109, 0, 0.4);
-}
-
-/* ============================================
-   Galería de Servicios
+   SECCIÓN DE FILTROS
    ============================================ */
 .section-servicios {
-    padding: 4rem 0;
+  padding: var(--space-3xl) 0;
 }
 
 .section-servicios h1 {
-    font-family: var(--font-heading);
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--color-text-dark);
-    position: relative;
-    padding-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
 }
 
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 2rem;
+.section-servicios > .text-muted {
+  color: var(--color-neutral-600) !important;
+  margin-bottom: var(--space-3xl);
 }
 
-.service-item {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+/* Filtros */
+.btn-group {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3xl);
 }
 
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+.btn-check + .btn-outline-warning {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
-.service-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-}
-
-.service-item-content {
-    padding: 1.5rem;
-}
-
-.service-item h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    color: var(--color-text-dark);
-}
-
-.service-item-rating {
-    color: #ffd700;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-}
-
-.service-item-desc {
-    font-size: 0.95rem;
-    color: var(--color-text-muted);
-    margin-bottom: 1rem;
+.btn-check:checked + .btn-outline-warning,
+.btn-check:active + .btn-outline-warning {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
 }
 
 /* ============================================
-   Carrusel de Servicios
+   CAROUSEL MODERNO
    ============================================ */
 .carousel {
-    border-radius: 6px 6px 0 0;
-    overflow: hidden;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow: hidden;
 }
 
 .carousel-inner {
-    border-radius: 6px 6px 0 0;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .carousel-img {
-    height: 200px;
-    object-fit: cover;
-}
-
-.carousel-item-content {
-    border-radius: 6px 6px 0 0;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
 }
 
 .carousel-item {
-    height: 200px;
+  height: 250px;
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 8%;
-    background-color: rgba(0, 0, 0, 0.3);
+  width: 12%;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: background-color var(--transition-fast);
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.45);
 }
 
 /* ============================================
-   Filtros
+   CARDS DE SERVICIOS
    ============================================ */
-.filter-section {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+
+/* Estilos generales para .card (nuevos diseños modernos) */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
 }
 
-.filter-section h3 {
-    margin-bottom: 1rem;
-    font-size: 1rem;
+.card:hover {
+  border-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-lg);
 }
 
-.filter-checkbox {
-    display: flex;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    align-items: center;
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
-.filter-checkbox input[type="checkbox"] {
-    cursor: pointer;
+.card-title {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  margin-bottom: var(--space-md);
 }
 
-.filter-checkbox label {
-    cursor: pointer;
-    margin: 0;
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.card-footer {
+  background-color: white;
+  border-top: 1px solid var(--color-neutral-200);
+  padding: var(--space-lg);
+  margin: 0;
+}
+
+/* Estilos para badge de categoría */
+.badge {
+  font-weight: 500;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-md);
+}
+
+.card-service {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.card-service:hover {
+  border-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-service .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-neutral-200);
+  padding: var(--space-lg);
+  margin: 0;
+}
+
+.card-service .card-header h5 {
+  color: white;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Colores específicos de headers por categoría */
+.card-service.bg-danger .card-header {
+  background-color: var(--color-error);
+}
+
+.card-service.bg-primary .card-header {
+  background-color: var(--color-accent);
+}
+
+.card-service.bg-success .card-header {
+  background-color: var(--color-secondary);
+}
+
+.card-service.bg-warning .card-header {
+  background-color: var(--color-warning);
+}
+
+.card-service.bg-info .card-header {
+  background-color: var(--color-info);
+}
+
+.card-service.bg-dark .card-header {
+  background-color: var(--color-primary);
+}
+
+.card-service.bg-secondary .card-header {
+  background-color: var(--color-neutral-600);
+}
+
+.card-service .card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.card-service .card-text {
+  margin-bottom: var(--space-md);
+  line-height: 1.6;
+  color: var(--color-neutral-700);
+}
+
+.card-service .card-text strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.card-service .card-text.text-muted {
+  color: var(--color-neutral-600) !important;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.card-service .card-footer {
+  background-color: transparent;
+  border-top: 1px solid var(--color-neutral-200);
+  padding: var(--space-lg);
+  margin: 0;
+  display: flex;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.card-service .btn-sm {
+  font-size: 0.8rem;
+  padding: 0.4rem 0.75rem;
+  font-weight: 500;
 }
 
 /* ============================================
-   Responsive (Servicios)
+   GRID Y LAYOUT
    ============================================ */
+.row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  row-gap: var(--space-lg);
+}
+
+.col-md-6.col-lg-4 {
+  display: flex;
+  flex: 0 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .col-md-6.col-lg-4 {
+    width: calc(50% - var(--space-lg) * 0.5);
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-6.col-lg-4 {
+    width: calc(33.333333% - var(--space-lg) * 0.67);
+  }
+}
+
+.col-md-6.col-lg-4 > * {
+  width: 100%;
+}
+
+/* ============================================
+   PAGINACIÓN
+   ============================================ */
+.pagination {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin: var(--space-3xl) 0;
+  flex-wrap: wrap;
+}
+
+.page-item .page-link {
+  color: var(--color-accent);
+  border: 1px solid var(--color-neutral-300);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  transition: all var(--transition-fast);
+}
+
+.page-item .page-link:hover:not(.disabled) {
+  background-color: var(--color-accent);
+  color: white;
+  border-color: var(--color-accent);
+}
+
+.page-item.active .page-link {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.page-item.disabled .page-link {
+  color: var(--color-neutral-400);
+  cursor: not-allowed;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-neutral-50);
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-2xl);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .row.g-4 {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
 @media (max-width: 768px) {
-    .hero-section {
-        padding: 4rem 0;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
-    }
-
-    .service-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 1rem;
-    }
+  .section-servicios {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .section-servicios h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-md);
+  }
+  
+  .btn-group {
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .row.g-4 {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-md);
+  }
+  
+  .carousel-img,
+  .carousel-item {
+    height: 200px;
+  }
 }
 
 @media (max-width: 576px) {
-    .hero-section {
-        padding: 2rem 0;
-    }
-
-    .hero-section h1 {
-        font-size: 1.5rem;
-    }
-
-    .hero-section .btn {
-        display: block;
-        width: 100%;
-        margin-bottom: 1rem !important;
-        margin-right: 0 !important;
-    }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .filter-section {
-        padding: 1rem;
-    }
+  .section-servicios {
+    padding: var(--space-xl) 0;
+  }
+  
+  .section-servicios h1 {
+    font-size: 1.5rem;
+  }
+  
+  .row.g-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .carousel-img,
+  .carousel-item {
+    height: 180px;
+  }
+  
+  .card-service .card-header,
+  .card-service .card-body,
+  .card-service .card-footer {
+    padding: var(--space-md);
+  }
+  
+  .cta-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-md);
+  }
 }

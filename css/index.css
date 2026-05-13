@@ -1,291 +1,340 @@
-/* 
-    Estilos específicos para INDEX.HTML
-    Página de inicio - Hero Section con búsqueda y galería de servicios
-*/
+/**
+ * AVISOLOCAL - ESTILOS DE PÁGINA DE INICIO
+ * Diseño moderno, limpio y enfocado en UX
+ */
 
 /* ============================================
-   Hero Section Full Width (Index)
+   HERO SECTION MODERNO
    ============================================ */
 .hero-section-fullwidth {
-    width: 100vw;
-    margin-left: calc((-100vw + 100%) / 2);
-    background-image: 
-        linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
-        url('../img/PMC.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 4rem 1rem;
-    text-white;
-    text-align: center;
+  width: 100vw;
+  margin-left: calc((-100vw + 100%) / 2);
+  
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.95)), 
+              url('../img/PMC.jpg') center/cover;
+  background-attachment: fixed;
+  
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3xl) var(--space-lg);
+  
+  color: white;
+  position: relative;
 }
 
 .hero-content {
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 2rem;
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
 }
 
 .hero-section-fullwidth h1 {
-    font-weight: 700;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
-    animation: slideInDown 0.8s ease;
-    color: #ffffff;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-2xl);
+  line-height: 1.3;
+  letter-spacing: -0.5px;
 }
 
-.hero-section-fullwidth .btn-outline-light {
-    border-width: 2px;
-    transition: all 0.3s ease;
-}
-
-.hero-section-fullwidth .btn-outline-light:hover {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: var(--color-primary);
-    transform: translateY(-2px);
-}
-
-@keyframes slideInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ============================================
-   Buscador (Index)
-   ============================================ */
 .hero-section-fullwidth .input-group {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  margin-bottom: var(--space-2xl);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-section-fullwidth .form-control {
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+  border: none;
+  padding: 0.875rem 1.25rem;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--color-neutral-700);
+}
+
+.hero-section-fullwidth .form-control::placeholder {
+  color: var(--color-neutral-400);
 }
 
 .hero-section-fullwidth .form-control:focus {
-    box-shadow: none;
-    border: none;
+  box-shadow: none;
+  border: none;
+  outline: none;
 }
 
 .hero-section-fullwidth .btn-primary {
-    background-color: var(--color-accent);
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.2rem;
+  background-color: var(--color-accent);
+  border: none;
+  padding: 0.875rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
 }
 
 .hero-section-fullwidth .btn-primary:hover {
-    background-color: #0d5fee;
-    transform: scale(1.05);
+  background-color: var(--color-accent-hover);
+}
+
+/* Botones de categorías en hero */
+.hero-section-fullwidth .btn-group {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-section-fullwidth .btn-outline-light {
+  border-width: 2px;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.hero-section-fullwidth .btn-outline-light:hover {
+  background-color: white;
+  border-color: white;
+  color: var(--color-primary);
 }
 
 /* ============================================
-   Featured Services Section (Galería)
-   ============================================ */
-.featured-services {
-    background-color: #f8f9fa;
-    padding: 4rem 0;
-}
-
-.featured-services h2 {
-    position: relative;
-    padding-bottom: 1.5rem;
-    color: var(--color-text-dark);
-    font-family: var(--font-heading);
-}
-
-.featured-services h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: var(--color-secondary);
-    border-radius: 2px;
-}
-
-.service-card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    height: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
-}
-
-.service-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover .service-image {
-    transform: scale(1.1);
-}
-
-.service-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 1.5rem;
-}
-
-.service-card:hover .service-overlay {
-    opacity: 1;
-}
-
-.service-overlay .card-title {
-    color: white;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.service-overlay .stars {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: #ffd700;
-}
-
-.service-overlay .btn-outline-light {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-    border: 1px solid white;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.service-overlay .btn-outline-light:hover {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    color: #000;
-}
-
-/* ============================================
-   Sección Propósito / Sobre Nosotros (Index)
+   SECCIÓN DE PROPÓSITO
    ============================================ */
 .section-proposito {
-    padding: 4rem 0;
-    background-color: #f8f9fa;
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-neutral-50);
 }
 
 .section-proposito h2 {
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-dark);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xl);
+  color: var(--color-primary);
 }
 
+.section-proposito p {
+  font-size: 1.05rem;
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-md);
+  line-height: 1.8;
+}
+
+.section-proposito ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.section-proposito li {
+  padding: var(--space-md) 0;
+  color: var(--color-neutral-700);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.section-proposito li::before {
+  content: "✓";
+  color: var(--color-secondary);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Card de características en propósito */
 .section-proposito .card {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    border: none;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  text-align: center;
 }
 
-.section-proposito .card .btn-warning {
-    margin-top: 1rem;
+.section-proposito .card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary);
+}
+
+.section-proposito .card p {
+  margin-bottom: var(--space-lg);
+  color: var(--color-neutral-600);
+}
+
+.section-proposito .card .btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 /* ============================================
-   Responsive (Index)
+   SECCIÓN DE SERVICIOS DESTACADOS
    ============================================ */
+.featured-services {
+  padding: var(--space-3xl) 0;
+}
+
+.featured-services h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: var(--space-3xl);
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.service-card {
+  background-color: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--color-neutral-300);
+  box-shadow: var(--shadow-lg);
+}
+
+.service-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+.service-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+}
+
+.service-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  color: var(--color-primary);
+}
+
+.service-card .card-text {
+  color: var(--color-neutral-600);
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
+.service-card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.cta-section {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-primary);
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--space-lg);
+}
+
+.cta-section p {
+  color: var(--color-neutral-100);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-2xl);
+}
+
+.cta-section .btn {
+  min-width: 200px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .hero-section-fullwidth h1 {
+    font-size: 2rem;
+  }
+  
+  .section-proposito h2,
+  .featured-services h2,
+  .cta-section h2 {
+    font-size: 1.75rem;
+  }
+}
+
 @media (max-width: 768px) {
-    .hero-section-fullwidth {
-        min-height: 350px;
-        padding: 2rem 0;
-    }
-
-    .hero-section-fullwidth h1 {
-        font-size: 2rem;
-    }
-
-    .hero-section-fullwidth .input-group-lg > .form-control,
-    .hero-section-fullwidth .input-group-lg > .btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
-    .service-image {
-        height: 200px;
-    }
-
-    .btn-group {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .btn-group .btn {
-        flex: 1;
-        min-width: 100px;
-        margin: 0.25rem;
-    }
+  .hero-section-fullwidth {
+    min-height: 400px;
+    padding: var(--space-2xl) var(--space-lg);
+  }
+  
+  .hero-section-fullwidth h1 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xl);
+  }
+  
+  .hero-section-fullwidth .input-group {
+    flex-direction: column;
+  }
+  
+  .hero-section-fullwidth .btn-primary {
+    width: 100%;
+  }
+  
+  .hero-section-fullwidth .btn-group {
+    gap: var(--space-xs);
+  }
+  
+  .section-proposito,
+  .featured-services,
+  .cta-section {
+    padding: var(--space-2xl) 0;
+  }
+  
+  .service-image {
+    height: 150px;
+  }
 }
 
 @media (max-width: 576px) {
-    .hero-section-fullwidth {
-        min-height: 300px;
-        padding: 1.5rem 0;
-    }
-
-    .hero-section-fullwidth h1 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-    .service-card {
-        margin-bottom: 1rem;
-    }
-
-    .service-image {
-        height: 180px;
-    }
-
-    .featured-services .row {
-        --bs-gutter-x: 0.75rem;
-        --bs-gutter-y: 0.75rem;
-    }
-
-    .section-proposito .row {
-        gap: 1.5rem;
-    }
+  .hero-section-fullwidth {
+    min-height: 350px;
+  }
+  
+  .hero-section-fullwidth h1 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-lg);
+  }
+  
+  .hero-section-fullwidth .btn-outline-light {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .section-proposito h2,
+  .featured-services h2,
+  .cta-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-2xl);
+  }
+  
+  .featured-services {
+    margin-bottom: var(--space-2xl);
+  }
 }

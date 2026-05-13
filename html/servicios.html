@@ -15,8 +15,16 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome CDN para iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- CSS externo -->
+    <link rel="stylesheet" href="../css/design-system.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/servicios.css" />
   </head>
   <body>
     <!-- 
@@ -101,7 +109,7 @@
           <!-- Filtros -->
           <div class="row mb-5">
             <div class="col-12">
-              <div class="btn-group flex-wrap" role="group">
+              <div class="d-flex flex-wrap gap-2" role="group">
                 <input
                   type="radio"
                   class="btn-check"
@@ -109,9 +117,7 @@
                   id="filtro-todos"
                   checked
                 />
-                <label class="btn btn-outline-warning" for="filtro-todos"
-                  >Todos</label
-                >
+                <label class="btn btn-primary" for="filtro-todos">Todos</label>
 
                 <input
                   type="radio"
@@ -119,7 +125,7 @@
                   name="filtro"
                   id="filtro-salud"
                 />
-                <label class="btn btn-outline-warning" for="filtro-salud"
+                <label class="btn btn-outline-primary" for="filtro-salud"
                   >Salud</label
                 >
 
@@ -129,7 +135,7 @@
                   name="filtro"
                   id="filtro-educacion"
                 />
-                <label class="btn btn-outline-warning" for="filtro-educacion"
+                <label class="btn btn-outline-primary" for="filtro-educacion"
                   >Educación</label
                 >
 
@@ -139,7 +145,7 @@
                   name="filtro"
                   id="filtro-social"
                 />
-                <label class="btn btn-outline-warning" for="filtro-social"
+                <label class="btn btn-outline-primary" for="filtro-social"
                   >Apoyo Social</label
                 >
 
@@ -149,7 +155,7 @@
                   name="filtro"
                   id="filtro-recreacion"
                 />
-                <label class="btn btn-outline-warning" for="filtro-recreacion"
+                <label class="btn btn-outline-primary" for="filtro-recreacion"
                   >Recreación</label
                 >
               </div>
@@ -166,478 +172,462 @@
                         Cada servicio es un artículo independiente
                     -->
             <article class="col-md-6 col-lg-4" data-categoria="salud">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-danger text-white">
-                  <h5 class="card-title mb-0">Consultorio Puerto Varas</h5>
-                </div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselCentroMedico"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/centroMedico.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Consultorio Puerto Varas"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/centroMedico.jpg"
+                  alt="Consultorio Puerto Varas"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Salud</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Puerto Varas
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 65 223 4567
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-danger">Salud</span>
+                  </div>
+                  <h5 class="card-title">Consultorio Puerto Varas</h5>
+                  <p class="card-text text-muted small">
                     Atención médica general y controles preventivos para la
                     comunidad.
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Puerto Varas<br />
+                    <i class="fas fa-phone"></i> +56 65 223 4567
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/consultorio-puerto-varas.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Consultorio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/consultorio-puerto-varas.html"
-                    class="btn btn-sm btn-outline-danger"
+                    href="https://wa.me/56652234567"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Consultorio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="educacion">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-primary text-white"></div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselBiblioteca"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/BRPM.jpeg"
-                        class="d-block w-100 carousel-img"
-                        alt="Biblioteca"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/BRPM.jpeg"
+                  alt="Biblioteca Comunitaria"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Educación</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Avenida Libertad 456
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 2345 6789
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-primary">Educación</span>
+                  </div>
+                  <h5 class="card-title">Biblioteca Comunitaria</h5>
+                  <p class="card-text text-muted small">
                     Acceso a libros, sala de computadoras y talleres educativos
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Avenida Libertad
+                    456<br />
+                    <i class="fas fa-phone"></i> +56 9 2345 6789
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
-                  <button class="btn btn-sm btn-outline-primary">
-                    Más Información
-                  </button>
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/biblioteca-comunitaria.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
+                  <a
+                    href="https://wa.me/5692345678"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
+                  >
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                  </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="social">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-success text-white">
-                  <h5 class="card-title mb-0">Oficina de Bienestar Social</h5>
-                </div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselBienestar"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/servicioBienestar.jpeg"
-                        class="d-block w-100 carousel-img"
-                        alt="Bienestar Social"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/servicioBienestar.jpeg"
+                  alt="Bienestar Social"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text">
-                    <strong>Categoría:</strong> Apoyo Social
-                  </p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Pasaje Comunitario 789
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 3456 7890
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-success">Apoyo Social</span>
+                  </div>
+                  <h5 class="card-title">Oficina de Bienestar Social</h5>
+                  <p class="card-text text-muted small">
                     Asesoría social, ayudas y programas de apoyo comunitario
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Pasaje Comunitario
+                    789<br />
+                    <i class="fas fa-phone"></i> +56 9 3456 7890
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/oficina-bienestar-social.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/oficina-bienestar-social.html"
-                    class="btn btn-sm btn-outline-success"
+                    href="https://wa.me/5693456789"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="recreacion">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-warning text-white">
-                  <h5 class="card-title mb-0">Cancha Deportiva Comunitaria</h5>
-                </div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselCancha"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/canchaPublica.jpeg"
-                        class="d-block w-100 carousel-img"
-                        alt="Cancha Deportiva"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/canchaPublica.jpeg"
+                  alt="Cancha Deportiva"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text">
-                    <strong>Categoría:</strong> Recreación
-                  </p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Parque Central s/n
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 4567 8901
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark">Recreación</span>
+                  </div>
+                  <h5 class="card-title">Cancha Deportiva Comunitaria</h5>
+                  <p class="card-text text-muted small">
                     Espacios deportivos, entrenamientos pubicos y eventos
                     comunitarios
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Parque Central s/n<br />
+                    <i class="fas fa-phone"></i> +56 9 4567 8901
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/cancha-deportiva-comunitaria.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/cancha-deportiva-comunitaria.html"
-                    class="btn btn-sm btn-outline-warning"
+                    href="https://wa.me/5694567890"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="educacion">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-info text-white">
-                  <h5 class="card-title mb-0">Centro Educativo Comunitario</h5>
-                </div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselEducativo"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/centrocomunitario.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Centro Educativo"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/centrocomunitario.jpg"
+                  alt="Centro Educativo Comunitario"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Educación</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Calle Educación 234
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 5678 9012
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-primary">Educación</span>
+                  </div>
+                  <h5 class="card-title">Centro Educativo Comunitario</h5>
+                  <p class="card-text text-muted small">
                     Talleres de capacitación, cursos y programas de educación
                     continua
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Calle Educación 234<br />
+                    <i class="fas fa-phone"></i> +56 9 5678 9012
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/centro-educativo-comunitario.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/centro-educativo-comunitario.html"
-                    class="btn btn-sm btn-outline-info"
+                    href="https://wa.me/5695678901"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="salud">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-danger text-white">
-                  <h5 class="card-title mb-0">Clínica Dental Municipal</h5>
-                </div>
-                <!-- Carrusel Bootstrap -->
-                <div
-                  id="carouselDental"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/ClinicadentalMunicipal.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Clínica Dental"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/ClinicadentalMunicipal.jpg"
+                  alt="Clínica Dental"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Salud</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Avenida Dental 567
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 6789 0123
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-danger">Salud</span>
+                  </div>
+                  <h5 class="card-title">Clínica Dental Municipal</h5>
+                  <p class="card-text text-muted small">
                     Servicios dentales preventivos y tratamientos especializados
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Avenida Dental 567<br />
+                    <i class="fas fa-phone"></i> +56 9 6789 0123
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/clinica-dental-municipal.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/clinica-dental-municipal.html"
-                    class="btn btn-sm btn-outline-danger"
+                    href="https://wa.me/5696789012"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
-            <!-- Servicio Prueba 1 -->
+            <!-- Farmacia Comunitaria -->
             <article class="col-md-6 col-lg-4" data-categoria="salud">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-secondary text-white">
-                  <h5 class="card-title mb-0">Farmacia Comunitaria</h5>
-                </div>
-                <div
-                  id="carouselFarmacia"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/Community.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Farmacia"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/Community.jpg"
+                  alt="Farmacia"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Salud</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Avenida Principal 890
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 7890 1234
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-danger">Salud</span>
+                  </div>
+                  <h5 class="card-title">Farmacia Comunitaria</h5>
+                  <p class="card-text text-muted small">
                     Medicamentos, asesoría farmacéutica y productos de salud
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Avenida Principal
+                    890<br />
+                    <i class="fas fa-phone"></i> +56 9 7890 1234
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/farmacia-comunitaria.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/farmacia-comunitaria.html"
-                    class="btn btn-sm btn-outline-secondary"
+                    href="https://wa.me/5697890123"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
-            <!-- Servicio Prueba 2 -->
+            <!-- Taller Mecánico -->
             <article class="col-md-6 col-lg-4" data-categoria="servicios">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-dark text-white">
-                  <h5 class="card-title mb-0">Taller Mecánico</h5>
-                </div>
-                <div
-                  id="carouselTaller"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/PMC.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Taller Mecánico"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/PMC.jpg"
+                  alt="Taller Mecánico"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Servicios</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Camino Industrial 234
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 8901 2345
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-secondary">Servicios</span>
+                  </div>
+                  <h5 class="card-title">Taller Mecánico</h5>
+                  <p class="card-text text-muted small">
                     Reparación y mantenimiento de vehículos, servicios de
                     diagnóstico
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Camino Industrial
+                    234<br />
+                    <i class="fas fa-phone"></i> +56 9 8901 2345
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/taller-mecanico.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/taller-mecanico.html"
-                    class="btn btn-sm btn-outline-dark"
+                    href="https://wa.me/5698901234"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
-            <!-- Servicio Prueba 3 -->
+            <!-- Peluquería Local -->
             <article class="col-md-6 col-lg-4" data-categoria="belleza">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div
-                  class="card-header bg-teal text-white"
-                  style="background-color: #20c997"
-                >
-                  <h5 class="card-title mb-0">Peluquería Local</h5>
-                </div>
-                <div
-                  id="carouselPeluqueria"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/Community.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Peluquería"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/Community.jpg"
+                  alt="Peluquería"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Belleza</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Paseo Central 567
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 9 9012 3456
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-info">Belleza</span>
+                  </div>
+                  <h5 class="card-title">Peluquería Local</h5>
+                  <p class="card-text text-muted small">
                     Cortes, tinturas, tratamientos y diseño personalizado
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Paseo Central 567<br />
+                    <i class="fas fa-phone"></i> +56 9 9012 3456
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/peluqueria-local.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/peluqueria-local.html"
-                    class="btn btn-sm btn-outline-secondary"
+                    href="https://wa.me/5699012345"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="servicios">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div class="card-header bg-warning text-dark">
-                  <h5 class="card-title mb-0">Ferretería Alerce</h5>
-                </div>
-                <div
-                  id="carouselFerreteria"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/centrocomunitario.jpg"
-                        class="d-block w-100 carousel-img"
-                        alt="Ferretería Alerce"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/centrocomunitario.jpg"
+                  alt="Ferretería Alerce"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Servicios</p>
-                  <p class="card-text"><strong>Ubicación:</strong> Alerce</p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 65 240 0180
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-warning text-dark">Servicios</span>
+                  </div>
+                  <h5 class="card-title">Ferretería Alerce</h5>
+                  <p class="card-text text-muted small">
                     Herramientas, materiales y asesoría para mejoras del hogar.
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Alerce<br />
+                    <i class="fas fa-phone"></i> +56 65 240 0180
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/ferreteria-alerce.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/ferreteria-alerce.html"
-                    class="btn btn-sm btn-outline-warning"
+                    href="https://wa.me/56652400180"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
             </article>
 
             <article class="col-md-6 col-lg-4" data-categoria="servicios">
-              <div class="card shadow-sm border-0 h-100 card-service">
-                <div
-                  class="card-header bg-pink text-white"
-                  style="background-color: #d63384"
-                >
-                  <h5 class="card-title mb-0">Florería Puerto Montt</h5>
-                </div>
-                <div
-                  id="carouselFloreria"
-                  class="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img
-                        src="../img/services/BRPM.jpeg"
-                        class="d-block w-100 carousel-img"
-                        alt="Florería Puerto Montt"
-                      />
-                    </div>
-                </div>
+              <div class="card h-100">
+                <img
+                  src="../img/services/BRPM.jpeg"
+                  alt="Florería Puerto Montt"
+                  class="card-img-top"
+                />
                 <div class="card-body">
-                  <p class="card-text"><strong>Categoría:</strong> Servicios</p>
-                  <p class="card-text">
-                    <strong>Ubicación:</strong> Puerto Montt Centro
-                  </p>
-                  <p class="card-text">
-                    <strong>Teléfono:</strong> +56 65 240 0190
-                  </p>
-                  <p class="card-text text-muted">
+                  <div class="d-flex align-items-center gap-2 mb-2">
+                    <span class="badge bg-secondary">Servicios</span>
+                  </div>
+                  <h5 class="card-title">Florería Puerto Montt</h5>
+                  <p class="card-text text-muted small">
                     Ramos, arreglos y decoración floral para eventos y regalos.
                   </p>
+                  <p class="card-text small mb-3">
+                    <i class="fas fa-map-marker-alt"></i> Puerto Montt Centro<br />
+                    <i class="fas fa-phone"></i> +56 65 240 0190
+                  </p>
                 </div>
-                <div class="card-footer bg-white">
+                <div class="card-footer bg-white border-top-0">
+                  <div class="d-grid gap-2">
+                    <a
+                      href="servicios/floreria-puerto-montt.html"
+                      class="btn btn-primary btn-sm"
+                    >
+                      Ver Servicio
+                    </a>
+                  </div>
                   <a
-                    href="servicios/floreria-puerto-montt.html"
-                    class="btn btn-sm btn-outline-secondary"
+                    href="https://wa.me/56652400190"
+                    class="btn btn-sm btn-outline-secondary w-100 mt-2"
+                    title="Contactar por WhatsApp"
+                    target="_blank"
                   >
-                    Ver Servicio
+                    <i class="fab fa-whatsapp"></i> WhatsApp
                   </a>
                 </div>
               </div>
@@ -647,30 +637,28 @@
       </section>
 
       <!-- paginacion -->
-      <nav aria-label="...">
+      <nav aria-label="Paginación de servicios" class="py-4">
         <ul class="pagination pagination justify-content-center">
           <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">Previous</a>
+            <a class="page-link" href="#" tabindex="-1">Anterior</a>
           </li>
           <li class="page-item active"><a class="page-link" href="#">1</a></li>
           <li class="page-item">
-            <a class="page-link" href="#">2 <span class="sr-only"></span></a>
+            <a class="page-link" href="#">2</a>
           </li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
           <li class="page-item">
-            <a class="page-link" href="#">Next</a>
+            <a class="page-link" href="#">Siguiente</a>
           </li>
         </ul>
       </nav>
 
       <!-- Call to Action -->
-      <section class="cta-section py-5 bg-light">
-        <div class="container text-center">
-          <h2 class="mb-4">¿No encontraste lo que buscas?</h2>
-          <p class="mb-4">
-            Registra un nuevo servicio y ayuda a otros en la comunidad
-          </p>
-          <a href="registro.html" class="btn btn-warning btn-lg"
+      <section class="cta-section">
+        <div class="container">
+          <h2>¿No encontraste lo que buscas?</h2>
+          <p>Registra un nuevo servicio y ayuda a otros en la comunidad</p>
+          <a href="registro.html" class="btn btn-primary btn-lg"
             >Agregar Servicio</a
           >
         </div>
